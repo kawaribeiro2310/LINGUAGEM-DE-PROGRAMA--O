@@ -1,3 +1,5 @@
+##CRIANDO TIPOS DE VARIÁVEIS DIFERENTES
+
 x = 10
 nome = "KAWA"
 nota = 9.5
