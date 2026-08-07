@@ -52,5 +52,5 @@ while True:
         print("Opção inválida. Digite 's' para sim ou 'n' para não.")
 
         if opcao == 'n':
-            print("Obrigado por utilizar a loja!")
+            print("Obrigado por utilizar a loja! :D")
             break
