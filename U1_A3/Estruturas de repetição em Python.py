@@ -7,3 +7,6 @@ while numero != 0:
     else:
         print(f"{numero} é ímpar") 
         break
+
+    for i in range(1, 11):
+        print(x)
