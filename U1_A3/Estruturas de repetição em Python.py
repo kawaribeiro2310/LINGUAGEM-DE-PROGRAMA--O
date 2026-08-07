@@ -9,4 +9,4 @@ while numero != 0:
         break
 
     for i in range(1, 11):
-        print(x)
+        print(i)
