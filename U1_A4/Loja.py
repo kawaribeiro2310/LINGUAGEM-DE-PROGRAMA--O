@@ -47,10 +47,12 @@ while True:
         print(f"O preço final do produto '{produto}' é: R$ {preco_final:.2f}")
     elif continuar == 'n':
         print("Obrigado por utilizar a loja!")
+        print(f"total de vendas realizadas: R$ {preco_final:.2f}")
+        faturamento_total = preco_final  # Supondo que seja a soma de todas as vendas
+        media_vendas = faturamento_total  # Supondo que seja a média de todas as vendas 
+        print(f"total de vendas realizadas: R$ {preco_final:.2f}")
+        print(f"faturamento total: R$ {faturamento_total:.2f}")
+        print(f"média de vendas: R$ {media_vendas:.2f}")
+        print(" Encerrando o programa...")
         break
-    else:
-        print("Opção inválida. Digite 's' para sim ou 'n' para não.")
-
-        if opcao == 'n':
-            print("Obrigado por utilizar a loja! :D")
-            break
+        
