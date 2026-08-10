@@ -46,4 +46,4 @@ Os algoritmos e códigos foram implementados utilizando o **Visual Studio Code**
 
 1. **Clone este repositório:**
    ```bash
-   git clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git)
+   git clone [https://github.com/kawaribeiro2310/LINGUAGEM-DE-PROGRAMA--O.git](https://github.com/kawaribeiro2310/LINGUAGEM-DE-PROGRAMA--O.git)
