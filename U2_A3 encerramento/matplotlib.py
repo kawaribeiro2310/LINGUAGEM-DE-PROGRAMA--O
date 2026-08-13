@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+
+
 class Produto:
     def __init__(self, nome, preco, quantidade):
         self.nome = nome
@@ -31,7 +34,7 @@ print("Bem-vindo à loja!")
 produto = input("Digite o nome do produto: ")
 preco = float(input("Digite o preço do produto: "))
 percentual_desconto = float(input("Digite o percentual de desconto (0 a 100): "))
-preco_final = registrar_venda(produto, preco, percentual_desconto)
+preco_final = U1_A4.Loja.registrar_venda(produto, preco, percentual_desconto)
 print(f"O preço final do produto '{produto}' é: R$ {preco_final:.2f}")
 print("Deseja registrar outra venda? (s/n): ")
 resposta = input().lower()
