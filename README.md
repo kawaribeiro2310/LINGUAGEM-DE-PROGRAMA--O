@@ -44,7 +44,6 @@ Os algoritmos e códigos foram implementados utilizando o **Visual Studio Code**
 
 ## 🚀 Como Executar os Códigos
 
-## 🚀 Como Executar os Códigos
 
 1. **Clone este repositório:**
    ```bash
