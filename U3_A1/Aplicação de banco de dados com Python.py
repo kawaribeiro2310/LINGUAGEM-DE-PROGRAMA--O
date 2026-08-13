@@ -1,16 +1,73 @@
 import sqlite3
-conn = sqlite3.connect('banco_de_dados.db')
+
+# CREATE (Criação da tabela e inserção de dados de exemplo)
+
+conn = sqlite3.connect('contatos.db')
+
 cursor = conn.cursor()
 
-create_table = '''
-CREATE TABLE IF NOT EXISTS produtos (
-    id INTERGER PRIMARY KEY KEY
-    TEXT NOT NULL,
-    preco REAL NOT NULL,
-    estoque INTEGER NOT NULL)'''
+cursor.execute('''
 
-cursor.execute(create_table)
+CREATE TABLE IF NOT EXISTS Contatos (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+nome TEXT,
+
+email TEXT,
+
+telefone TEXT
+
+)
+
+''')
+
+dados_exemplo = [
+
+('João', 'joao@email.com', '123-456-7890'),
+
+('Maria', 'maria@email.com', '987-654-3210'),
+
+('Carlos', 'carlos@email.com', '555-555-5555')
+
+]
+
+cursor.executemany('INSERT INTO Contatos (nome, email, telefone) VALUES (?, ?, ?)', dados_exemplo)
+
 conn.commit()
-conn.close()
 
-print("Tabela 'produtos' criada com sucesso!")
+# READ (Leitura e exibição dos contatos)
+
+cursor.execute('SELECT * FROM Contatos')
+
+contatos = cursor.fetchall()
+
+print(“Contatos:”)
+
+for contato in contatos:
+
+print(contato)
+
+# UPDATE (Atualização do número de telefone do contato com ID 2)
+
+novo_telefone = '999-999-9999'
+
+contato_id = 2
+
+
+cursor.execute('UPDATE Contatos SET telefone = ? WHERE id = ?', (novo_telefone, contato_id))
+
+conn.commit()
+
+# DELETE (Exclusão do contato com ID 1)
+
+contato_id_para_excluir = 1
+
+
+cursor.execute('DELETE FROM Contatos WHERE id = ?', (contato_id_para_excluir,))
+
+conn.commit()
+
+# Fechando a conexão
+
+conn.close()
